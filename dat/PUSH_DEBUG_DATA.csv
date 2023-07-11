@@ -1,0 +1,2 @@
+UID,PlanPushCalls,PushStartPosesFound,PushActionsFoundToSim,PushPlanTime,PushSimTime,PushSimSuccesses,PushDBLookupTime,PushesFoundInDB,PushDBSuccesses,PushDBFails,PushDBTotalTime,PushSuccessInSim,PushFailInSim,NoCollisionWithObject,IKDidNotReachEnd,IKObstacleCollision,IKJointLimitViolation,InverseVelFail,PushStartPoseUnreachable,PushStartPoseInObstacle
+100000,55,26,14,43.9593,66.4513,7,5.38117,8,8,0,10.5756,15,7,1,0,4,7,0,16,5

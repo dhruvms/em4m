@@ -1,0 +1,2 @@
+UID,Solved?,NumTrajs,SolveTime,MAPFTime,PushPlannerTime,SimTimeExpansions,OnlyDuplicate,NoDuplicate,NoSuccs
+100000,1,5,136.835,14.4507,85.0441,25.3697,14,1,1,0

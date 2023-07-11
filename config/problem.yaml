@@ -1,0 +1,100 @@
+initial_configuration:
+  joint_state:
+    # Above table:
+    - { name: torso_lift_joint,       position: 0.1 }
+    - { name: r_shoulder_pan_joint,   position: -1.68651 }
+    - { name: r_shoulder_lift_joint,  position: -0.184315 }
+    - { name: r_upper_arm_roll_joint, position: -1.67611 }
+    - { name: r_elbow_flex_joint,     position: -1.66215 } # limit: -0.2 }
+    - { name: r_forearm_roll_joint,   position: 0.285096 }
+    - { name: r_wrist_flex_joint,     position: -0.658798 } # limit: -0.2 }
+    - { name: r_wrist_roll_joint,     position: 1.41563 }
+
+goal:
+  x: 0.7
+  y: 0.0
+  z: 0.9
+  roll: 0.0
+  pitch: 0.0
+  yaw: 0.0
+  plan_budget: 300.0
+  sim_budget: 900.0
+  total_budget: 300.0
+  save: true
+  cc_2d: true
+  cc_3d: false
+
+robot:
+  start:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    qx: 0.0
+    qy: 0.0
+    qz: 0.0
+    qw: 1.0
+  pushing:
+    samples: 5
+    plan_time: 0.2
+    control:
+      dt: 0.01
+      Kp: 0.5
+      Ki: 0.1
+      Kd: 0.01
+      iters: 1000
+    input: false
+  grasping:
+    tries: 100
+    lift: 0.075
+  speed: 0.1
+  interpolate: false
+  shortcut: true
+  runs: 1
+  study: 1
+  yoshikawa_tries: 20
+  push_ik_ends: 20
+  replay: false
+
+mapf:
+  res: 0.01
+  planning_time: 300.0
+  goal_thresh: 0.02
+  whca:
+    window: 4
+    grid: 4
+  cbs:
+    llhc: 3
+    hlhc: 0
+    cp: 0
+    algo: 1 # 0: WHCA, 1: CBS, 2: ECBS, 3: CBSw/P, 4: PBS, 5: ours
+
+objects:
+  min_size: 0.03
+  x_size: 0.08
+  y_size: 0.08
+  z_size: 0.2
+  num_immov: 5
+  num_mov: 5
+  ycb: false
+  discretisation:
+    x        0.01
+    y        0.01
+    theta    0.0872665
+    ox       0.0
+    oy       0.0
+  z_offset_scale: 0.1
+  friction_min: 0.001
+  friction_max: 0.5
+
+sampling:
+  samples: 25000
+  steps: 50
+  gbias: 0.05
+  gthresh: 0.0174533 # 1 radian
+  timeout: 120.0
+  planner: 2 # 0: RRT, 1: RRT*, 2: TCRRT
+  tcrrt:
+    mode: 1
+    I: 1000
+    J: 100
+  ompl_planner: 0 # 0: RRT, 1: KPIECE

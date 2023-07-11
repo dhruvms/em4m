@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="2">
+	<name>pushplan</name>
+	<version>0.0.0</version>
+	<description>The pushplan package</description>
+	<author email="dhruvsaxena@cmu.edu">Dhruv Mauria Saxena</author>
+	<maintainer email="dhruvsaxena@cmu.edu">Dhruv Mauria Saxena</maintainer>
+	<license>BSD</license>
+
+	<buildtool_depend>catkin</buildtool_depend>
+
+    <depend>roscpp</depend>
+    <depend>rospy</depend>
+    <depend>leatherman</depend>
+    <depend>moveit_msgs</depend>
+    <depend>sbpl_collision_checking</depend>
+    <depend>sbpl_kdl_robot_model</depend>
+    <depend>smpl_ompl_interface</depend>
+    <depend>visualization_msgs</depend>
+    <depend>tf</depend>
+    <depend>std_msgs</depend>
+    <depend>sensor_msgs</depend>
+    <depend>trajectory_msgs</depend>
+    <depend>comms</depend>
+    <depend>moveit_core</depend>
+    <depend>moveit_ros_planning_interface</depend>
+    <depend>pr2_moveit_config</depend>
+
+    <build_depend>message_generation</build_depend>
+    <exec_depend>message_runtime</exec_depend>
+</package>
